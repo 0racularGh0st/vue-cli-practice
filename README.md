@@ -1,6 +1,6 @@
 # vuejs-playlist
 
-> A Vue.js project
+> Practice Vue.js project
 
 ## Build Setup
 
