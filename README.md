@@ -1,6 +1,6 @@
 # vuejs-playlist
 
-> Practice Vue.js project
+> Practice Vue.js project, dont bother cloning this, lol
 
 ## Build Setup
 
