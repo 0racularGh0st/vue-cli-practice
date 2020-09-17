@@ -2,8 +2,8 @@
   <div id="ninjas">
   <ul>
   <li v-for="ninja in ninjas" @click="ninja.show=!ninja.show">
-    <h2>{{ninja.name}}</h2>
-    <h3 v-show="ninja.show">{{ninja.speciality}}</h3>
+    <h2>{{ninja.name}} {{visible}}</h2>
+    <h3 v-show="visible">{{ninja.speciality}}</h3>
    </li>
   </ul>
   </div>
@@ -11,10 +11,14 @@
 
 <script>
 export default {
- // props: ['ninjas'], Without validation
+// props: ['visible','ninjas'],
  props: {
    ninjas:{
      type: Array,
+     required: true
+   },
+   visible:{
+     type: Boolean,
      required: true
    }
  },
