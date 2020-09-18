@@ -3,7 +3,7 @@
   <ul>
   <li v-for="ninja in ninjas" @click="ninja.show=!ninja.show">
     <h2>{{ninja.name}} {{visible}}</h2>
-    <h3 v-show="visible">{{ninja.speciality}}</h3>
+    <h3 v-show="visible || ninja.show">{{ninja.speciality}}</h3>
    </li>
   </ul>
   </div>
