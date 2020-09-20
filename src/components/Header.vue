@@ -1,16 +1,22 @@
 <template>
     <header>
-    <h1>{{title}}</h1>
+    <h1> {{this.title}}</h1>
+    <button v-on:click="changeTitle">Change Title</button>
     </header>
 </template>
 
 <script>
 
 export default {
- 
+  props :['title'],
   data () {
     return {
-     title: 'Vue Ninjas'
+    
+    }
+  },
+  methods : {
+    changeTitle: function(){
+      this.$emit('changeTitle',"Vue Practice App");
     }
   }
 }
