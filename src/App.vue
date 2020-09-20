@@ -8,7 +8,7 @@
         <app-footer v-bind:title="title"/>
 </div>
 <div v-if="section2show"> 
-      <button @click="component= 'formHelper'"> Switch component</button>
+      <button @click="component= 'addBlog'"> Switch to Blog</button>
       <!-- maintain data while switching between components -->
       <keep-alive>
       <component v-bind:is="component"></component>
@@ -23,13 +23,15 @@ import Footer from './components/Footer.vue';
 import Ninjas from './components/Ninjas.vue';
 import Section2 from './components/Section2';
 import FormHelper from './components/FormHelper';
+import AddBlog from './components/AddBlog';
 export default {
   components: {
     'app-header': Header,
     'app-footer': Footer,
     'app-ninjas': Ninjas,
     'section2' : Section2,
-    'formHelper' : FormHelper
+    'formHelper' : FormHelper,
+    'addBlog' : AddBlog
   },
   data () {
     return {
