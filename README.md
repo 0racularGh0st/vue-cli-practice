@@ -1,4 +1,4 @@
-# vuejs-playlist
+# vuejs-practice
 
 > Practice Vue.js project, dont bother cloning this, lol
 
