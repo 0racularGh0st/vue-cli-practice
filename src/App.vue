@@ -1,8 +1,15 @@
 <template>
-<div>
-<app-header v-bind:title="title" v-on:changeTitle="updateTitle($event)"></app-header>
-<app-ninjas v-bind:ninjas="ninjas" v-bind:visible="false" />
-<app-footer v-bind:title="title"/>
+<div> 
+<button @click="basics = !basics">Basics</button>
+<button @click="section2show = !section2show">Section2</button>
+<div v-if="basics">
+        <app-header v-bind:title="title" v-on:changeTitle="updateTitle($event)"></app-header>
+        <app-ninjas v-bind:ninjas="ninjas" v-bind:visible="false" />
+        <app-footer v-bind:title="title"/>
+</div>
+<div v-if="section2show"> 
+      <section2/>
+</div>
 </div>
 </template>
 
@@ -10,14 +17,18 @@
 import Header from './components/Header.vue';
 import Footer from './components/Footer.vue';
 import Ninjas from './components/Ninjas.vue';
+import Section2 from './components/Section2';
 export default {
   components: {
     'app-header': Header,
     'app-footer': Footer,
-    'app-ninjas': Ninjas
+    'app-ninjas': Ninjas,
+    'section2' : Section2
   },
   data () {
     return {
+     basics: false,
+     section2show: false,
      ninjas: [
                 {name: 'Ryu', speciality: 'Vue Components', show: false},
                 {name: 'Crystal', speciality: 'HTML Wizardry', show: false},
