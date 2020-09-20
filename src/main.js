@@ -13,7 +13,7 @@ bind(el, binding, vnode){
   el.style.color = "#"+ Math.random().toString().slice(2,8);
 }
 });
-
+//Directives 
 Vue.directive('theme',{
 bind(el, binding, vnode){
   if(binding.value == 'wide'){
@@ -24,6 +24,11 @@ bind(el, binding, vnode){
   }
 }
 });
+
+//Filters 
+Vue.filter('to-uppercase',function(value){
+ return value.toUpperCase();
+})
 new Vue({
   el: '#app',
   render: h => h(App)
