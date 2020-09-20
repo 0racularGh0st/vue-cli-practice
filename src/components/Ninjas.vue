@@ -26,6 +26,9 @@ export default {
     return {
       
     }
+  },
+  beforeCreate(){
+    alert('created');
   }
 }
 </script>
