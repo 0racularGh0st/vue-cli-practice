@@ -1,11 +1,6 @@
 <template>
 <div>
-<formHelper>
-    <h2>
-        Slot
-    </h2>
-    <h1 slot="title">Slot Title</h1>
-</formHelper>
+Section 2
 </div>
 </template>
 

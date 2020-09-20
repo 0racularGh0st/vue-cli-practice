@@ -1,8 +1,6 @@
 <template>
 <div>
-    <slot name="title"></slot>
-FormHelper
-<slot></slot>
+  Form Helper
 </div>
 </template>
 
