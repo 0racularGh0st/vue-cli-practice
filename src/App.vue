@@ -9,7 +9,10 @@
 </div>
 <div v-if="section2show"> 
       <button @click="component= 'formHelper'"> Switch component</button>
+      <!-- maintain data while switching between components -->
+      <keep-alive>
       <component v-bind:is="component"></component>
+      </keep-alive>
 </div>
 </div>
 </template>
