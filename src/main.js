@@ -8,6 +8,22 @@ import VueResource from 'vue-resource';
 export const bus = new Vue();
 
 Vue.use(VueResource);
+Vue.directive('rainbow',{
+bind(el, binding, vnode){
+  el.style.color = "#"+ Math.random().toString().slice(2,8);
+}
+});
+
+Vue.directive('theme',{
+bind(el, binding, vnode){
+  if(binding.value == 'wide'){
+    el.style.maxWidth = "90vw";
+  }
+  if(binding.arg == 'column'){
+    el.style.maxWidth = "50vw";
+  }
+}
+});
 new Vue({
   el: '#app',
   render: h => h(App)
