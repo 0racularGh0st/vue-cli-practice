@@ -12,7 +12,8 @@ export const bus = new Vue();
 Vue.use(VueResource);
 Vue.use(VueRouter);
 const router = new VueRouter({
-routes: Routes
+routes: Routes,
+mode: 'history'
 });
 Vue.directive('rainbow',{
 bind(el, binding, vnode){
