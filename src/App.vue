@@ -1,6 +1,6 @@
 <template>
 <div> 
-<button @click="basics = !basics">Basics</button>
+<!-- <button @click="basics = !basics">Basics</button>
 <button @click="section2show = !section2show">Section2</button>
 
 <div v-if="basics">
@@ -11,12 +11,15 @@
 <div v-if="section2show"> 
       <button @click="component= 'addBlog'"> Switch to Add  Blog</button>
       <button @click="component= 'showBlogs'"> Switch to Show Blog</button>
-      <button @click="component= 'listBlogs'"> Switch to List Blogs</button>
-      <!-- maintain data while switching between components -->
+      <button @click="component= 'listlogs'"> Switch to List Blogs</button>
+      
       <keep-alive>
       <component v-bind:is="component"></component>
       </keep-alive>
-</div>
+</div> -->
+
+<!-- Using routes -->
+<router-view></router-view>
 </div>
 </template>
 
