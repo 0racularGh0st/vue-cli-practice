@@ -16,19 +16,19 @@ bind(el, binding, vnode){
 //Directives 
 Vue.directive('theme',{
 bind(el, binding, vnode){
-  if(binding.value == 'wide'){
-    el.style.maxWidth = "90vw";
-  }
-  if(binding.arg == 'column'){
-    el.style.maxWidth = "50vw";
-  }
+  // if(binding.value == 'wide'){
+  //   el.style.maxWidth = "90vw";
+  // }
+  // if(binding.arg == 'column'){
+  //   el.style.maxWidth = "50vw";
+  // }
 }
 });
 
 //Filters 
-Vue.filter('to-uppercase',function(value){
- return value.toUpperCase();
-})
+// Vue.filter('to-uppercase',function(value){
+//  return value.toUpperCase();
+// })
 new Vue({
   el: '#app',
   render: h => h(App)
