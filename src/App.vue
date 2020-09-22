@@ -19,6 +19,7 @@
 </div> -->
 
 <!-- Using routes -->
+<headerNew></headerNew>
 <router-view></router-view>
 </div>
 </template>
@@ -32,6 +33,7 @@ import FormHelper from './components/FormHelper';
 import AddBlog from './components/AddBlog';
 import ShowBlogs from './components/showBlogs';
 import ListBlogs from './components/ListBlogs';
+import HeaderNew from './components/HeaderNew'
 export default {
   components: {
     'app-header': Header,
@@ -41,7 +43,8 @@ export default {
     'formHelper' : FormHelper,
     'addBlog' : AddBlog,
     'showBlogs' : ShowBlogs,
-    'listBlogs' : ListBlogs
+    'listBlogs' : ListBlogs,
+    'headerNew': HeaderNew
   },
   data () {
     return {
