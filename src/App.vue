@@ -2,6 +2,7 @@
 <div> 
 <button @click="basics = !basics">Basics</button>
 <button @click="section2show = !section2show">Section2</button>
+
 <div v-if="basics">
         <app-header v-bind:title="title" v-on:changeTitle="updateTitle($event)"></app-header>
         <app-ninjas v-bind:ninjas="ninjas" v-bind:visible="false" />
@@ -10,6 +11,7 @@
 <div v-if="section2show"> 
       <button @click="component= 'addBlog'"> Switch to Add  Blog</button>
       <button @click="component= 'showBlogs'"> Switch to Show Blog</button>
+      <button @click="component= 'listBlogs'"> Switch to List Blogs</button>
       <!-- maintain data while switching between components -->
       <keep-alive>
       <component v-bind:is="component"></component>
@@ -26,6 +28,7 @@ import Section2 from './components/Section2';
 import FormHelper from './components/FormHelper';
 import AddBlog from './components/AddBlog';
 import ShowBlogs from './components/showBlogs';
+import ListBlogs from './components/ListBlogs';
 export default {
   components: {
     'app-header': Header,
@@ -34,7 +37,8 @@ export default {
     'section2' : Section2,
     'formHelper' : FormHelper,
     'addBlog' : AddBlog,
-    'showBlogs' : ShowBlogs
+    'showBlogs' : ShowBlogs,
+    'listBlogs' : ListBlogs
   },
   data () {
     return {

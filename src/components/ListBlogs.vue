@@ -1,10 +1,9 @@
 <template>
     <div v-theme:column="'wide'" id="show-blogs">
-        <h1>All Blog Articles</h1>
+        <h1>List Blog View</h1>
         <input type="text" v-model="search" placeholder="search blogs"/>
         <div v-for="blog in filteredBlogs" v-bind:key="blog.id" class="single-blog">
             <h2 v-rainbow>{{ blog.title | to-uppercase }}</h2>
-            <article>{{ blog.body }}</article>
         </div>
     </div>
 </template>
@@ -26,7 +25,7 @@ export default {
         });
     },
     computed: {
-       
+    
     },
     filters: {
         'to-uppercase': function(value){
@@ -40,7 +39,7 @@ export default {
             }
         }
     },
-    mixins: [searchMixins]
+     mixins: [searchMixins]
 }
 </script>
 
